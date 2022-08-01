@@ -17,7 +17,6 @@ class _HomeScreenState extends State<HomeScreen> {
   var answer = '';
   @override
   Widget build(BuildContext context) {
-    print('rebuild');
     return Scaffold(
       backgroundColor: Colors.black,
       body: SafeArea(
@@ -35,7 +34,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         style: TextStyle(fontSize: 30, color: Colors.white),
                       ),
                       Text(
-                        userInput.toString(),
+                        answer.toString(),
                         style: TextStyle(fontSize: 30, color: Colors.white),
                       )
                     ],
@@ -50,19 +49,32 @@ class _HomeScreenState extends State<HomeScreen> {
                       children: [
                         MYButton(
                           title: 'AC',
-                          onPress: () {},
+                          onPress: () {
+                            userInput = '';
+                            answer = '';
+                            setState(() {});
+                          },
                         ),
                         MYButton(
                           title: '+/-',
-                          onPress: () {},
+                          onPress: () {
+                            userInput += '+/-';
+                            setState(() {});
+                          },
                         ),
                         MYButton(
                           title: '%',
-                          onPress: () {},
+                          onPress: () {
+                            userInput += '%';
+                            setState(() {});
+                          },
                         ),
                         MYButton(
                           title: '/',
-                          onPress: () {},
+                          onPress: () {
+                            userInput += '/';
+                            setState(() {});
+                          },
                           color: Color(0xffffa00a),
                         ),
                       ],
@@ -71,19 +83,31 @@ class _HomeScreenState extends State<HomeScreen> {
                       children: [
                         MYButton(
                           title: '7',
-                          onPress: () {},
+                          onPress: () {
+                            userInput += '7';
+                            setState(() {});
+                          },
                         ),
                         MYButton(
                           title: '8',
-                          onPress: () {},
+                          onPress: () {
+                            userInput += '8';
+                            setState(() {});
+                          },
                         ),
                         MYButton(
                           title: '9',
-                          onPress: () {},
+                          onPress: () {
+                            userInput += '9';
+                            setState(() {});
+                          },
                         ),
                         MYButton(
                           title: 'X',
-                          onPress: () {},
+                          onPress: () {
+                            userInput += 'X';
+                            setState(() {});
+                          },
                           color: Color(0xffffa00a),
                         ),
                       ],
@@ -92,19 +116,31 @@ class _HomeScreenState extends State<HomeScreen> {
                       children: [
                         MYButton(
                           title: '4',
-                          onPress: () {},
+                          onPress: () {
+                            userInput += '4';
+                            setState(() {});
+                          },
                         ),
                         MYButton(
                           title: '5',
-                          onPress: () {},
+                          onPress: () {
+                            userInput += '5';
+                            setState(() {});
+                          },
                         ),
                         MYButton(
                           title: '6',
-                          onPress: () {},
+                          onPress: () {
+                            userInput += '6';
+                            setState(() {});
+                          },
                         ),
                         MYButton(
                           title: '-',
-                          onPress: () {},
+                          onPress: () {
+                            userInput += '-';
+                            setState(() {});
+                          },
                           color: Color(0xffffa00a),
                         ),
                       ],
@@ -113,19 +149,31 @@ class _HomeScreenState extends State<HomeScreen> {
                       children: [
                         MYButton(
                           title: '1',
-                          onPress: () {},
+                          onPress: () {
+                            userInput += '1';
+                            setState(() {});
+                          },
                         ),
                         MYButton(
                           title: '2',
-                          onPress: () {},
+                          onPress: () {
+                            userInput += '2';
+                            setState(() {});
+                          },
                         ),
                         MYButton(
                           title: '3',
-                          onPress: () {},
+                          onPress: () {
+                            userInput += '3';
+                            setState(() {});
+                          },
                         ),
                         MYButton(
                           title: '+',
-                          onPress: () {},
+                          onPress: () {
+                            userInput += '+';
+                            setState(() {});
+                          },
                           color: Color(0xffffa00a),
                         ),
                       ],
@@ -134,19 +182,31 @@ class _HomeScreenState extends State<HomeScreen> {
                       children: [
                         MYButton(
                           title: '0',
-                          onPress: () {},
+                          onPress: () {
+                            userInput += '0';
+                            setState(() {});
+                          },
                         ),
                         MYButton(
                           title: '.',
-                          onPress: () {},
+                          onPress: () {
+                            userInput += '.';
+                            setState(() {});
+                          },
                         ),
                         MYButton(
                           title: 'DEL',
-                          onPress: () {},
+                          onPress: () {
+                            userInput += 'DEL';
+                            setState(() {});
+                          },
                         ),
                         MYButton(
                           title: '=',
-                          onPress: () {},
+                          onPress: () {
+                            userInput += '=';
+                            setState(() {});
+                          },
                           color: Color(0xffffa00a),
                         ),
                       ],
