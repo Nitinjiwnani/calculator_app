@@ -64,29 +64,32 @@ class _HomeScreenState extends State<HomeScreen> {
                         MYButton(
                           title: '+/-',
                           onPress: () {
-                            if (double.parse(userInput) == 0.0) {
-                            } else {
-                              if (userInput[0] == '-') {
-                                userInput = userInput.substring(1);
+                            setState(() {
+                              if (double.parse(userInput) == 0.0) {
                               } else {
-                                userInput = '-' + userInput;
+                                if (userInput[0] == '-') {
+                                  userInput = userInput.substring(1);
+                                } else {
+                                  userInput = '-' + userInput;
+                                }
                               }
-                            }
-                            setState(() {});
+                            });
                           },
                         ),
                         MYButton(
                           title: '%',
                           onPress: () {
-                            userInput += '%';
-                            setState(() {});
+                            setState(() {
+                              userInput += '%';
+                            });
                           },
                         ),
                         MYButton(
                           title: '/',
                           onPress: () {
-                            userInput += '/';
-                            setState(() {});
+                            setState(() {
+                              userInput += '/';
+                            });
                           },
                           color: Color(0xffffa00a),
                         ),
@@ -97,29 +100,33 @@ class _HomeScreenState extends State<HomeScreen> {
                         MYButton(
                           title: '7',
                           onPress: () {
-                            userInput += '7';
-                            setState(() {});
+                            setState(() {
+                              userInput += '7';
+                            });
                           },
                         ),
                         MYButton(
                           title: '8',
                           onPress: () {
-                            userInput += '8';
-                            setState(() {});
+                            setState(() {
+                              userInput += '8';
+                            });
                           },
                         ),
                         MYButton(
                           title: '9',
                           onPress: () {
-                            userInput += '9';
-                            setState(() {});
+                            setState(() {
+                              userInput += '9';
+                            });
                           },
                         ),
                         MYButton(
                           title: 'x',
                           onPress: () {
-                            userInput += 'x';
-                            setState(() {});
+                            setState(() {
+                              userInput += 'x';
+                            });
                           },
                           color: Color(0xffffa00a),
                         ),
@@ -130,29 +137,33 @@ class _HomeScreenState extends State<HomeScreen> {
                         MYButton(
                           title: '4',
                           onPress: () {
-                            userInput += '4';
-                            setState(() {});
+                            setState(() {
+                              userInput += '4';
+                            });
                           },
                         ),
                         MYButton(
                           title: '5',
                           onPress: () {
-                            userInput += '5';
-                            setState(() {});
+                            setState(() {
+                              userInput += '5';
+                            });
                           },
                         ),
                         MYButton(
                           title: '6',
                           onPress: () {
-                            userInput += '6';
-                            setState(() {});
+                            setState(() {
+                              userInput += '6';
+                            });
                           },
                         ),
                         MYButton(
                           title: '-',
                           onPress: () {
-                            userInput += '-';
-                            setState(() {});
+                            setState(() {
+                              userInput += '-';
+                            });
                           },
                           color: Color(0xffffa00a),
                         ),
@@ -163,29 +174,33 @@ class _HomeScreenState extends State<HomeScreen> {
                         MYButton(
                           title: '1',
                           onPress: () {
-                            userInput += '1';
-                            setState(() {});
+                            setState(() {
+                              userInput += '1';
+                            });
                           },
                         ),
                         MYButton(
                           title: '2',
                           onPress: () {
-                            userInput += '2';
-                            setState(() {});
+                            setState(() {
+                              userInput += '2';
+                            });
                           },
                         ),
                         MYButton(
                           title: '3',
                           onPress: () {
-                            userInput += '3';
-                            setState(() {});
+                            setState(() {
+                              userInput += '3';
+                            });
                           },
                         ),
                         MYButton(
                           title: '+',
                           onPress: () {
-                            userInput += '+';
-                            setState(() {});
+                            setState(() {
+                              userInput += '+';
+                            });
                           },
                           color: Color(0xffffa00a),
                         ),
@@ -196,29 +211,32 @@ class _HomeScreenState extends State<HomeScreen> {
                         MYButton(
                           title: '0',
                           onPress: () {
-                            userInput += '0';
-                            setState(() {});
+                            setState(() {
+                              userInput += '0';
+                            });
                           },
                         ),
                         MYButton(
                           title: '.',
                           onPress: () {
-                            userInput += '.';
-                            setState(() {});
+                            setState(() {
+                              userInput += '.';
+                            });
                           },
                         ),
                         MYButton(
                           title: 'DEL',
                           onPress: () {
-                            userInput =
-                                userInput.substring(0, userInput.length - 1);
-                            setState(() {});
+                            setState(() {
+                              userInput =
+                                  userInput.substring(0, userInput.length - 1);
+                            });
                           },
                         ),
                         MYButton(
                           title: '=',
                           onPress: () {
-                            equalPress();
+                            equalPressed();
                             setState(() {});
                           },
                           color: Color(0xffffa00a),
@@ -235,7 +253,7 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 
-  void equalPress() {
+  void equalPressed() {
     String finalUserInput = userInput;
     finalUserInput = userInput.replaceAll('x', '*');
     Parser p = Parser();
