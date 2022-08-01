@@ -1,16 +1,10 @@
-# calculator_app
+# Calculator_app
 
-A new Flutter project.
+Hello, I've created a simple calculator app with flutter to understand the concept of components, constructor, reusable widget, strings and its functions. I've used the math_expressions dart package for the logics at the backend part.
 
-## Getting Started
 
-This project is a starting point for a Flutter application.
+![Screenshot_20220802_030319](https://user-images.githubusercontent.com/86294062/182250969-eefaebc6-c17a-4cf4-9ade-f225ea12bad1.jpg)
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+https://user-images.githubusercontent.com/86294062/182250973-937dbcd5-df2c-429f-8560-ab26290f8136.mp4
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
