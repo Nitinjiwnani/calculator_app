@@ -33,12 +33,12 @@ class _HomeScreenState extends State<HomeScreen> {
                         alignment: Alignment.bottomRight,
                         child: Text(
                           userInput.toString(),
-                          style: TextStyle(fontSize: 30, color: Colors.white),
+                          style: TextStyle(fontSize: 40, color: Colors.white),
                         ),
                       ),
                       Text(
                         answer.toString(),
-                        style: TextStyle(fontSize: 30, color: Colors.white),
+                        style: TextStyle(fontSize: 40, color: Colors.white),
                       )
                     ],
                   ),
@@ -53,9 +53,10 @@ class _HomeScreenState extends State<HomeScreen> {
                         MYButton(
                           title: 'AC',
                           onPress: () {
-                            userInput = '';
-                            answer = '';
-                            setState(() {});
+                            setState(() {
+                              userInput = '';
+                              answer = '';
+                            });
                           },
                         ),
                         MYButton(
@@ -67,7 +68,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                 if (userInput[0] == '-') {
                                   userInput = userInput.substring(1);
                                 } else {
-                                  userInput = '-' + userInput;
+                                  userInput = '-$userInput';
                                 }
                               }
                             });
